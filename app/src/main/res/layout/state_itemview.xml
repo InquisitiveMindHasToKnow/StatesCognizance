@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/first_state_item"
     android:layout_width="match_parent"
-    android:layout_height="96dp"
+    android:layout_height="112dp"
     android:layout_margin="8dp"
     android:layout_marginTop="12dp"
     app:cardBackgroundColor="@color/colorAccent">
@@ -19,7 +19,7 @@
         android:layout_marginBottom="4dp">
 
         <TextView
-            android:id="@+id/state_name_textview"
+            android:id="@+id/state_name_and_abbreviation_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -29,27 +29,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/state_abbreviation_textview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:text="US"
-            android:textColor="@color/textColor"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/state_name_textview" />
 
-<!--        <ImageView-->
-<!--            android:id="@+id/state_flag_imageview"-->
-<!--            android:layout_width="80dp"-->
-<!--            android:layout_height="80dp"-->
-<!--            android:src="@mipmap/ic_launcher"-->
-<!--            app:layout_constraintStart_toEndOf="@id/state_abbreviation_textview"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
+        <ImageView
+            android:id="@+id/state_flag_imageview"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/state_name_and_abbreviation_textview"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

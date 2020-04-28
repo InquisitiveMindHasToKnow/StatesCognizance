@@ -1,5 +1,6 @@
 package org.ohmstheresistance.statescognizance.rv
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,10 +28,19 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) : RecyclerView.
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
+        @SuppressLint("SetTextI18n")
         fun bindItems(stateInfo: StateInfo) {
-            itemView.state_name_textview.text = stateInfo.name
-            itemView.state_abbreviation_textview.text = stateInfo.abbreviation
 
+            val stateName = stateInfo.name
+            val stateNameAbbreviation = stateInfo.abbreviation
+            val stateFlag = stateInfo.flag
+
+            itemView.state_name_and_abbreviation_textview.text =
+                "$stateName, $stateNameAbbreviation"
+
+            Glide.with(itemView.context)
+                .load(stateFlag)
+                .into(itemView.state_flag_imageview)
         }
 }
 }
