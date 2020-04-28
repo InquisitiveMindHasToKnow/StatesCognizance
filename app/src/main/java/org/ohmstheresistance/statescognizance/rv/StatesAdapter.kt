@@ -3,7 +3,9 @@ package org.ohmstheresistance.statescognizance.rv
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.state_itemview.view.*
 import org.ohmstheresistance.statescognizance.R
 import org.ohmstheresistance.statescognizance.data.StateInfo
