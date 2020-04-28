@@ -63,15 +63,5 @@ class StatesFragment : Fragment() {
         state_recycler_view.layoutManager = GridLayoutManager(context,2, GridLayoutManager.VERTICAL, false)
         state_recycler_view.adapter = statesAdapter
 
-        val layoutManager = GridLayoutManager(activity, 2)
-        layoutManager.spanSizeLookup = object : GridLayoutManager.SpanSizeLookup() {
-            override fun getSpanSize(position: Int): Int {
-                return when (position % 3) {
-                    0 -> 2
-                    else -> 1
-                }
-            }
-        }
-        state_recycler_view.layoutManager = layoutManager
     }
 }
