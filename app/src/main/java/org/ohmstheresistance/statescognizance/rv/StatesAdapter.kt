@@ -4,14 +4,14 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.state_itemview.view.*
 import org.ohmstheresistance.statescognizance.R
 import org.ohmstheresistance.statescognizance.data.StateInfo
 
-class StatesAdapter(private val stateList: ArrayList<StateInfo>) : RecyclerView.Adapter<StatesAdapter.ViewHolder>() {
+class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
+    RecyclerView.Adapter<StatesAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
         val v = LayoutInflater.from(parent.context).inflate(R.layout.state_itemview, parent, false)
@@ -23,7 +23,7 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) : RecyclerView.
     }
 
     override fun getItemCount(): Int {
-       return stateList.size
+        return stateList.size
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -42,5 +42,5 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) : RecyclerView.
                 .load(stateFlag)
                 .into(itemView.state_flag_imageview)
         }
-}
+    }
 }
