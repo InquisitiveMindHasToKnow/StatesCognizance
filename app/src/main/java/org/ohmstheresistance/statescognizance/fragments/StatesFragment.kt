@@ -35,6 +35,7 @@ class StatesFragment : Fragment() {
         return binding.root
     }
 
+
     private fun getInfo() {
 
         val service = Retrofit.Builder()
@@ -46,7 +47,6 @@ class StatesFragment : Fragment() {
         service.retrieveStatesInformation("InquisitiveMindHasToKnow")
             .enqueue(object : Callback<List<StateInfo>> {
                 override fun onResponse(call: Call<List<StateInfo>>, response: Response<List<StateInfo>>) {
-
                     response.body()?.forEach { println("STATES: ${it.name}") }
 
                     response.body()?.let { statesList.addAll(it) }
