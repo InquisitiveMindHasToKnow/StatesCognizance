@@ -9,10 +9,152 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
             tools:context=".fragments.DisplayInfoFragment">
 
+            <TextView
+                android:id="@+id/state_name_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:hint="New York"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <ImageView
+                android:id="@+id/state_location_imageview"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:src="@drawable/ny_location"
+                app:layout_constraintTop_toBottomOf="@id/state_name_textview"
+                app:layout_constraintEnd_toStartOf="@id/state_image_imageview"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/state_image_imageview"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:src="@drawable/ny_map"
+                app:layout_constraintTop_toBottomOf="@id/state_name_textview"
+                app:layout_constraintEnd_toStartOf="@id/state_seal_imageview"
+                app:layout_constraintStart_toEndOf="@id/state_location_imageview"/>
+
+            <ImageView
+                android:id="@+id/state_seal_imageview"
+                android:layout_width="64dp"
+                android:layout_height="88dp"
+                android:src="@drawable/ny_seal"
+                app:layout_constraintTop_toBottomOf="@id/state_name_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/state_image_imageview"/>
+
+            <TextView
+                android:id="@+id/state_admission_to_statehood_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="Admission to Statehood: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_location_imageview"/>
+
+            <TextView
+                android:id="@+id/state_admission_to_statehood_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="July 26, 1788 (11th State)"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_admission_to_statehood_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_location_imageview"/>
+
+            <TextView
+                android:id="@+id/state_capital_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="State Capital: "
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintTop_toBottomOf="@id/state_admission_to_statehood_textview"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginEnd="24dp"/>
+
+            <TextView
+                android:id="@+id/state_capital_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Albany"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_capital_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_admission_to_statehood_textview"/>
+
+            <TextView
+                android:id="@+id/state_nickname_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="Nickname: "
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_capital_textview"
+                android:layout_marginEnd="24dp"/>
+
+            <TextView
+                android:id="@+id/state_nickname_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Empire State"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_nickname_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_capital_textview"/>
+
+            <TextView
+                android:id="@+id/state_population_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="Population: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_nickname_textview"/>
+
+            <TextView
+                android:id="@+id/state_population_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21,500,505"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_population_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_nickname_textview"/>
+
+            <TextView
+                android:id="@+id/state_area_codes_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="Area Codes: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_population_header_textview"/>
+
+            <TextView
+                android:id="@+id/state_area_codes_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="212, 315, 347, 516, 518, 585, 607, 631, 646, 716,\n718, 845, 914, 917, 929"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_area_codes_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_population_textview"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

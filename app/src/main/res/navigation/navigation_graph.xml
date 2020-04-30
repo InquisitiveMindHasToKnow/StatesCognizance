@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_graph"
-    app:startDestination="@id/homePageFragment">
+    app:startDestination="@id/displayInfoFragment">
 
     <fragment
         android:id="@+id/statesFragment"
@@ -18,4 +18,8 @@
             android:id="@+id/action_homePageFragment_to_statesFragment"
             app:destination="@id/statesFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/displayInfoFragment"
+        android:name="org.ohmstheresistance.statescognizance.fragments.DisplayInfoFragment"
+        android:label="DisplayInfoFragment" />
 </navigation>
