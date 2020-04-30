@@ -156,6 +156,47 @@
                 app:layout_constraintStart_toEndOf="@id/state_area_codes_header_textview"
                 app:layout_constraintTop_toBottomOf="@id/state_population_textview"/>
 
+            <TextView
+                android:id="@+id/state_border_states_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="Border States: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_area_codes_textview"/>
+
+            <TextView
+                android:id="@+id/state_border_states_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connecticut, Massachusetts, New Jersey,\nPennsylvania, Rhode Island (water border),\nVermont"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_border_states_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_area_codes_textview"/>
+
+            <TextView
+                android:id="@+id/state_area_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="Area: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_border_states_textview"/>
+
+            <TextView
+                android:id="@+id/state_area_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="54,475 sq.mi (141,090 sq.km.), 27th\nLand: 47,224 sq.mi. (122,310 sq.km.), 30th\nWater: 7,251 sq.mi. (18,780 sq.km.), 8th\nGreat Lakes: 3,901 sq.mi. (10,104 sq.km.),3rd\nCoastline: 127 mi. (204 km.), 14th\nShoreline: 1,850 mi. (2,977 km.), 13th"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_area_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_border_states_textview"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
