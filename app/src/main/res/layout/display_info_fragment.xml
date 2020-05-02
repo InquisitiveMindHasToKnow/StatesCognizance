@@ -197,6 +197,153 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toEndOf="@id/state_area_header_textview"
                 app:layout_constraintTop_toBottomOf="@id/state_border_states_textview"/>
+
+            <TextView
+                android:id="@+id/state_location_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="Location: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_area_textview"/>
+
+            <TextView
+                android:id="@+id/state_location_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Absolute Center: 42°57.9'N / 76°1'W "
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_location_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_area_textview"/>
+
+            <TextView
+                android:id="@+id/state_flower_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="State Flower: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_location_textview"/>
+
+            <TextView
+                android:id="@+id/state_flower_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rose"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_flower_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_location_textview"/>
+
+            <TextView
+                android:id="@+id/state_tree_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="State Tree: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_flower_textview"/>
+
+            <TextView
+                android:id="@+id/state_tree_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sugar Maple"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_tree_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_flower_textview"/>
+
+            <TextView
+                android:id="@+id/state_highest_point_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="State Highest Point: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_tree_textview"/>
+
+            <TextView
+                android:id="@+id/state_highest_point_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mt. Marcy ; 5,344 feet, ( 1,629 m. )21st tallest "
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_highest_point_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_tree_textview"/>
+
+            <TextView
+                android:id="@+id/state_lowest_point_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="State Lowest Point: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_highest_point_textview"/>
+
+            <TextView
+                android:id="@+id/state_lowest_point_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New York; sea level, tied for 3rd lowest"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_lowest_point_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_highest_point_textview"/>
+
+            <TextView
+                android:id="@+id/state_bird_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="State Bird: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_lowest_point_textview"/>
+
+            <TextView
+                android:id="@+id/state_bird_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eastern Bluebird"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_bird_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_lowest_point_textview"/>
+
+            <TextView
+                android:id="@+id/state_total_counties_header_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:layout_marginStart="4dp"
+                android:text="Total Counties: "
+                android:layout_marginEnd="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_bird_textview"/>
+
+            <TextView
+                android:id="@+id/state_total_counties_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="62"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/state_total_counties_header_textview"
+                app:layout_constraintTop_toBottomOf="@id/state_bird_textview"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 </layout>
