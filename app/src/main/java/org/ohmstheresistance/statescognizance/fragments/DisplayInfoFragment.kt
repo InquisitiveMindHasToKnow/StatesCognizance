@@ -24,10 +24,12 @@ class DisplayInfoFragment : Fragment() {
         val stateName = stateInfoBundle?.stateName
         val stateAbbreviation = stateInfoBundle?.stateAbbreviation
         val stateFlag = stateInfoBundle?.stateFlag
+        val dateAdmittedToStatehood = stateInfoBundle?.admittedToStatehood
 
 
 
         binding.stateNameTextview.text = stateName + ", " + stateAbbreviation
+        binding.stateAdmissionToStatehoodTextview.text = dateAdmittedToStatehood
 
         context?.let {
             Glide.with(it)

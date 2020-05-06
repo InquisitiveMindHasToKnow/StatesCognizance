@@ -35,5 +35,8 @@
         <argument
             android:name="stateFlag"
             app:argType="string" />
+        <argument
+            android:name="admittedToStatehood"
+            app:argType="string" />
     </fragment>
 </navigation>

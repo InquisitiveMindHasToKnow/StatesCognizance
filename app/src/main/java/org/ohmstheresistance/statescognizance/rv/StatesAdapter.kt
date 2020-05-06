@@ -39,6 +39,7 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
             val stateName = stateInfo.name
             val stateNameAbbreviation = stateInfo.abbreviation
             val stateFlag = stateInfo.flag
+            val admittedToStatehood = stateInfo.admissionToStatehood
 
             itemView.state_name_and_abbreviation_textview.text =
                 "$stateName, $stateNameAbbreviation"
@@ -51,8 +52,10 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
             stateInfoBundle.putString("State Name", stateName)
             stateInfoBundle.putString("State Abbreviation", stateNameAbbreviation)
             stateInfoBundle.putString("State Flag", stateFlag)
+            stateInfoBundle.putString("Admitted To Statehood", admittedToStatehood)
 
-            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment(stateName, stateNameAbbreviation, stateFlag)) }
+
+            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment(stateName, stateNameAbbreviation, stateFlag, admittedToStatehood)) }
 
 
         }

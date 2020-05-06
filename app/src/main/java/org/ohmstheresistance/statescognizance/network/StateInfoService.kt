@@ -7,6 +7,6 @@ import retrofit2.http.Path
 
 interface StateInfoService {
 
-    @GET("{user}/ce0ca068b458801a9583a11bb335d5ca/raw/b0a3e5b52719b0c7e6a752a5db165a7ff5473fdf/StatesInfo")
+    @GET("{user}/ce0ca068b458801a9583a11bb335d5ca/raw/35a0c52dee62695d3c644e2e3441d153893cd863/StatesInfo")
     fun retrieveStatesInformation(@Path("user") user: String): Call<List<StateInfo>>
 }
