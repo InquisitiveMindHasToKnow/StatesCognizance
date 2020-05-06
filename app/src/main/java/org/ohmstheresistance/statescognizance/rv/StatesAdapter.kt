@@ -4,11 +4,15 @@ import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.state_itemview.view.*
 import org.ohmstheresistance.statescognizance.R
 import org.ohmstheresistance.statescognizance.data.StateInfo
+import org.ohmstheresistance.statescognizance.fragments.StatesFragmentDirections
 
 class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
     RecyclerView.Adapter<StatesAdapter.ViewHolder>() {
@@ -41,6 +45,8 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
             Glide.with(itemView.context)
                 .load(stateFlag)
                 .into(itemView.state_flag_imageview)
+
+            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment()) }
         }
     }
 }
