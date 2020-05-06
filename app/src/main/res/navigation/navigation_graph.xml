@@ -25,5 +25,15 @@
     <fragment
         android:id="@+id/displayInfoFragment"
         android:name="org.ohmstheresistance.statescognizance.fragments.DisplayInfoFragment"
-        android:label="DisplayInfoFragment" />
+        android:label="DisplayInfoFragment" >
+        <argument
+            android:name="stateName"
+            app:argType="string" />
+        <argument
+            android:name="stateAbbreviation"
+            app:argType="string" />
+        <argument
+            android:name="stateFlag"
+            app:argType="string" />
+    </fragment>
 </navigation>

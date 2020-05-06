@@ -1,6 +1,7 @@
 package org.ohmstheresistance.statescognizance.rv
 
 import android.annotation.SuppressLint
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,7 +47,14 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
                 .load(stateFlag)
                 .into(itemView.state_flag_imageview)
 
-            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment()) }
+            val stateInfoBundle = Bundle()
+            stateInfoBundle.putString("State Name", stateName)
+            stateInfoBundle.putString("State Abbreviation", stateNameAbbreviation)
+            stateInfoBundle.putString("State Flag", stateFlag)
+
+            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment(stateName, stateNameAbbreviation, stateFlag)) }
+
+
         }
     }
 }

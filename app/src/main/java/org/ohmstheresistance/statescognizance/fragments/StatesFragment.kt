@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.states_fragment.*
@@ -48,9 +47,7 @@ class StatesFragment : Fragment() {
             .enqueue(object : Callback<List<StateInfo>> {
                 override fun onResponse(call: Call<List<StateInfo>>, response: Response<List<StateInfo>>) {
                     response.body()?.forEach { println("STATES: ${it.name}") }
-
                     response.body()?.let { statesList.addAll(it) }
-                    Toast.makeText(context, "IT WORK", Toast.LENGTH_SHORT).show()
 
                     setupStatesRecyclerView()
                 }
