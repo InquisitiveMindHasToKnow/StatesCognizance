@@ -31,7 +31,8 @@
                 android:src="@drawable/ny_location"
                 app:layout_constraintTop_toBottomOf="@id/state_name_textview"
                 app:layout_constraintEnd_toStartOf="@id/state_image_imageview"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/display_state_flag_imageview"/>
 
             <ImageView
                 android:id="@+id/state_image_imageview"
@@ -40,7 +41,7 @@
                 android:src="@drawable/ny_map"
                 app:layout_constraintTop_toBottomOf="@id/state_name_textview"
                 app:layout_constraintEnd_toStartOf="@id/state_seal_imageview"
-                app:layout_constraintStart_toEndOf="@id/state_location_imageview"/>
+                app:layout_constraintStart_toEndOf="@id/state_location_imageview" />
 
             <ImageView
                 android:id="@+id/state_seal_imageview"
@@ -49,7 +50,18 @@
                 android:src="@drawable/ny_seal"
                 app:layout_constraintTop_toBottomOf="@id/state_name_textview"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/state_image_imageview"/>
+                app:layout_constraintStart_toEndOf="@id/state_image_imageview"
+                app:layout_constraintBottom_toTopOf="@id/display_state_flag_imageview"/>
+
+            <ImageView
+                android:id="@+id/display_state_flag_imageview"
+                android:layout_width="112dp"
+                android:layout_height="96dp"
+                android:src="@drawable/newyork_flag"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/state_image_imageview"
+                app:layout_constraintBottom_toTopOf="@id/state_admission_to_statehood_textview"/>
 
             <TextView
                 android:id="@+id/state_admission_to_statehood_header_textview"
@@ -61,7 +73,7 @@
                 android:text="Admission to Statehood: "
                 android:layout_marginEnd="24dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/state_location_imageview"/>
+                app:layout_constraintTop_toBottomOf="@id/display_state_flag_imageview"/>
 
             <TextView
                 android:id="@+id/state_admission_to_statehood_textview"
@@ -70,7 +82,7 @@
                 android:text="July 26, 1788 (11th State)"
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toEndOf="@id/state_admission_to_statehood_header_textview"
-                app:layout_constraintTop_toBottomOf="@id/state_location_imageview"/>
+                app:layout_constraintTop_toBottomOf="@id/display_state_flag_imageview"/>
 
             <TextView
                 android:id="@+id/state_capital_header_textview"
