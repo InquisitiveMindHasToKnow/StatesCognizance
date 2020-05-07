@@ -13,23 +13,13 @@
             android:background="#FFFFFF"
             tools:context=".fragments.DisplayInfoFragment">
 
-            <TextView
-                android:id="@+id/state_name_textview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:gravity="center_horizontal"
-                android:hint="New York"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/state_location_imageview"
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:src="@drawable/ny_location"
-                app:layout_constraintTop_toBottomOf="@id/state_name_textview"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/state_image_imageview"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/display_state_flag_imageview"/>
@@ -39,7 +29,7 @@
                 android:layout_width="88dp"
                 android:layout_height="88dp"
                 android:src="@drawable/ny_map"
-                app:layout_constraintTop_toBottomOf="@id/state_name_textview"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/state_seal_imageview"
                 app:layout_constraintStart_toEndOf="@id/state_location_imageview" />
 
@@ -48,7 +38,7 @@
                 android:layout_width="64dp"
                 android:layout_height="88dp"
                 android:src="@drawable/ny_seal"
-                app:layout_constraintTop_toBottomOf="@id/state_name_textview"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/state_image_imageview"
                 app:layout_constraintBottom_toTopOf="@id/display_state_flag_imageview"/>

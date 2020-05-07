@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.states_fragment.*
@@ -22,18 +23,16 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class StatesFragment : Fragment() {
 
-    val statesList = ArrayList<StateInfo>()
-    private val statesAdapter = StatesAdapter(statesList)
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
       val binding = DataBindingUtil.inflate<StatesFragmentBinding>(inflater, R.layout.states_fragment, container, false)
+
+        (activity as AppCompatActivity).supportActionBar?.title = resources.getString(R.string.app_name)
 
         getInfo()
 
         return binding.root
     }
-
 
     private fun getInfo() {
 
@@ -46,19 +45,18 @@ class StatesFragment : Fragment() {
         service.retrieveStatesInformation("InquisitiveMindHasToKnow")
             .enqueue(object : Callback<List<StateInfo>> {
                 override fun onResponse(call: Call<List<StateInfo>>, response: Response<List<StateInfo>>) {
+
+                    val statesList = ArrayList<StateInfo>()
                     response.body()?.forEach { println("STATES: ${it.name}") }
                     response.body()?.let { statesList.addAll(it) }
 
-                    setupStatesRecyclerView()
+                    val statesAdapter = StatesAdapter(statesList)
+                    state_recycler_view.layoutManager = GridLayoutManager(context,2, GridLayoutManager.VERTICAL, false)
+                    state_recycler_view.adapter = statesAdapter
+
                 }
                 override fun onFailure(call: Call<List<StateInfo>>, t: Throwable) =
                     t.printStackTrace()
             })
-    }
-
-    private fun setupStatesRecyclerView(){
-        state_recycler_view.layoutManager = GridLayoutManager(context,2, GridLayoutManager.VERTICAL, false)
-        state_recycler_view.adapter = statesAdapter
-
     }
 }
