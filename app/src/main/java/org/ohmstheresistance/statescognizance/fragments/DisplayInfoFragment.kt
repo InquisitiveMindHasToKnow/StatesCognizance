@@ -24,7 +24,7 @@ class DisplayInfoFragment : Fragment() {
         val stateFlag = stateInfoBundle?.stateFlag
         val dateAdmittedToStatehood = stateInfoBundle?.admittedToStatehood
 
-        (activity as AppCompatActivity).supportActionBar?.title = stateName + ", " + stateAbbreviation
+        (activity as AppCompatActivity).supportActionBar?.title = "$stateName, $stateAbbreviation"
 
         binding.stateAdmissionToStatehoodTextview.text = dateAdmittedToStatehood
 

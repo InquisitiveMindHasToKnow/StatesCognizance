@@ -40,6 +40,19 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
             val stateNameAbbreviation = stateInfo.abbreviation
             val stateFlag = stateInfo.flag
             val admittedToStatehood = stateInfo.admissionToStatehood
+            val stateCapital = stateInfo.capital
+            val stateNickname = stateInfo.nickname
+            val statePopulation = stateInfo.population
+            val stateAreaCodes = stateInfo.areaCodes
+            val borderStates = stateInfo.borderStates
+            val area = stateInfo.area
+            val stateLocation = stateInfo.location
+            val stateFlower = stateInfo.stateFlower
+            val stateTree = stateInfo.stateTree
+            val highestPoint = stateInfo.highestPoint
+            val lowestPoint = stateInfo.lowestPoint
+            val stateBird = stateInfo.stateBird
+            val totalCounties = stateInfo.totalCounties
 
             itemView.state_name_and_abbreviation_textview.text =
                 "$stateName, $stateNameAbbreviation"
