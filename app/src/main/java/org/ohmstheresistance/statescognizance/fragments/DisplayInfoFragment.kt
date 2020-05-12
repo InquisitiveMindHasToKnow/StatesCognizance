@@ -19,16 +19,22 @@ class DisplayInfoFragment : Fragment() {
 
         val stateInfoBundle = arguments?.let {DisplayInfoFragmentArgs.fromBundle(it)}
 
+        val year = " (2019)"
+
         val stateName = stateInfoBundle?.stateName
         val stateAbbreviation = stateInfoBundle?.stateAbbreviation
         val stateFlag = stateInfoBundle?.stateFlag
         val dateAdmittedToStatehood = stateInfoBundle?.admittedToStatehood
         val stateCapital = stateInfoBundle?.stateCapital
+        val stateNickname = stateInfoBundle?.stateNickname
+        val statePopulation = stateInfoBundle?.statePopulation
 
         (activity as AppCompatActivity).supportActionBar?.title = "$stateName, $stateAbbreviation"
 
         binding.stateAdmissionToStatehoodTextview.text = dateAdmittedToStatehood
         binding.stateCapitalTextview.text = stateCapital
+        binding.stateNicknameTextview.text = stateNickname
+        binding.statePopulationTextview.text = statePopulation + year
 
         context?.let {
             Glide.with(it)
