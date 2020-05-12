@@ -15,8 +15,8 @@ import org.ohmstheresistance.statescognizance.fragments.StatesFragmentDirections
 
 class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
     RecyclerView.Adapter<StatesAdapter.ViewHolder>() {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
 
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.state_itemview, parent, false)
         return ViewHolder(v)
     }
@@ -64,9 +64,10 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
             stateInfoBundle.putString("State Abbreviation", stateNameAbbreviation)
             stateInfoBundle.putString("State Flag", stateFlag)
             stateInfoBundle.putString("Admitted To Statehood", admittedToStatehood)
+            stateInfoBundle.putString("State Capital", stateCapital)
 
 
-            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment(stateName, stateNameAbbreviation, stateFlag, admittedToStatehood)) }
+            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment(stateName, stateNameAbbreviation, stateFlag, admittedToStatehood, stateCapital)) }
 
 
         }
