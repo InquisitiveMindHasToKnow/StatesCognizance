@@ -41,5 +41,11 @@
         <argument
             android:name="stateCapital"
             app:argType="string" />
+        <argument
+            android:name="stateNickname"
+            app:argType="string" />
+        <argument
+            android:name="statePopulation"
+            app:argType="string" />
     </fragment>
 </navigation>
