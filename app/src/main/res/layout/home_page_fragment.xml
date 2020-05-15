@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/home_page_constraint_layout"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.HomePageFragment">
 
@@ -12,9 +13,18 @@
         android:id="@+id/home_page_image"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        app:lottie_loop="true"
+        app:lottie_loop="false"
         app:lottie_fileName="us_map.json"
         app:lottie_autoPlay="true"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/home_page_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="gone"
+        android:src="@drawable/usa_map"
         app:layout_constraintTop_toTopOf="parent"
         />
 
