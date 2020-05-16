@@ -67,9 +67,10 @@ class StatesAdapter(private val stateList: ArrayList<StateInfo>) :
             stateInfoBundle.putString("State Capital", stateCapital)
             stateInfoBundle.putString("State Nickname", stateNickname)
             stateInfoBundle.putString("State Population", statePopulation)
+            stateInfoBundle.putString("Border States", borderStates)
 
-
-            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment(stateName, stateNameAbbreviation, stateFlag, admittedToStatehood, stateCapital, stateNickname, statePopulation)) }
+            itemView.setOnClickListener { itemView.findNavController().navigate(StatesFragmentDirections.actionStatesFragmentToDisplayInfoFragment(stateName, stateNameAbbreviation, stateFlag,
+                admittedToStatehood, stateCapital, stateNickname, statePopulation, borderStates)) }
 
 
         }
