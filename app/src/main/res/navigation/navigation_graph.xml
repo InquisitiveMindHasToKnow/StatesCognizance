@@ -47,5 +47,8 @@
         <argument
             android:name="statePopulation"
             app:argType="string" />
+        <argument
+            android:name="borderStates"
+            app:argType="string" />
     </fragment>
 </navigation>

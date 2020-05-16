@@ -28,6 +28,7 @@ class DisplayInfoFragment : Fragment() {
         val stateCapital = stateInfoBundle?.stateCapital
         val stateNickname = stateInfoBundle?.stateNickname
         val statePopulation = stateInfoBundle?.statePopulation
+        val borderStates = stateInfoBundle?.borderStates
 
         (activity as AppCompatActivity).supportActionBar?.title = "$stateName, $stateAbbreviation"
 
@@ -35,6 +36,7 @@ class DisplayInfoFragment : Fragment() {
         binding.stateCapitalTextview.text = stateCapital
         binding.stateNicknameTextview.text = stateNickname
         binding.statePopulationTextview.text = statePopulation + year
+        binding.stateBorderStatesTextview.text = borderStates
 
         context?.let {
             Glide.with(it)
