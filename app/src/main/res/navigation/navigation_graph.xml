@@ -50,5 +50,14 @@
         <argument
             android:name="borderStates"
             app:argType="string" />
+        <argument
+            android:name="stateBird"
+            app:argType="string" />
+        <argument
+            android:name="stateFlower"
+            app:argType="string" />
+        <argument
+            android:name="stateTree"
+            app:argType="string" />
     </fragment>
 </navigation>
