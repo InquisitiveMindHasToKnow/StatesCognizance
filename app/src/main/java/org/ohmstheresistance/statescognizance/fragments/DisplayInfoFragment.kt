@@ -32,6 +32,7 @@ class DisplayInfoFragment : Fragment() {
         val stateBird = stateInfoBundle?.stateBird
         val stateFlower = stateInfoBundle?.stateFlower
         val stateTree = stateInfoBundle?.stateTree
+        val totalCounties = stateInfoBundle?.totalCounties
 
         (activity as AppCompatActivity).supportActionBar?.title = "$stateName, $stateAbbreviation"
 
@@ -43,6 +44,7 @@ class DisplayInfoFragment : Fragment() {
         binding.stateBirdTextview.text = stateBird
         binding.stateFlowerTextview.text = stateFlower
         binding.stateTreeTextview.text = stateTree
+        binding.stateTotalCountiesTextview.text = totalCounties.toString()
 
         context?.let {
             Glide.with(it)

@@ -59,5 +59,8 @@
         <argument
             android:name="stateTree"
             app:argType="string" />
+        <argument
+            android:name="totalCounties"
+            app:argType="integer" />
     </fragment>
 </navigation>
